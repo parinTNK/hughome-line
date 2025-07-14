@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-red-100 to-pink-100">
+    <div className="min-h-screen p-4 flex items-center justify-center bg-gradient-to-br from-red-50 via-red-100 to-pink-100">
       <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md border border-red-100">
         <div className="flex flex-col items-center mb-8">
           <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-full p-3 mb-3 shadow-lg">
