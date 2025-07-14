@@ -31,12 +31,12 @@ export default function Home() {
             </svg>
           </div>
           <h1 className="text-3xl font-extrabold text-gray-800 mb-1 tracking-tight">
-            {mode === "login" ? "Welcome Back!" : "Create Account"}
+            {mode === "login" ? "Hug Home" : "Create Account"}
           </h1>
           <p className="text-gray-500 text-sm">
             {mode === "login"
-              ? "Login to your HugHome account"
-              : "Register to get started with HugHome"}
+              ? "Login to your Hug Home account"
+              : "Register to get started with Hug Home"}
           </p>
         </div>
         <form className="space-y-5" onSubmit={handleSubmit}>
