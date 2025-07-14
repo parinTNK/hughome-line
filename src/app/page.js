@@ -22,21 +22,21 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100">
-      <div className="bg-white/90 p-10 rounded-2xl shadow-2xl w-full max-w-md border border-gray-200">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-red-100 to-pink-100">
+      <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md border border-red-100">
         <div className="flex flex-col items-center mb-8">
-          <div className="bg-blue-500 rounded-full p-3 mb-3 shadow-lg">
+          <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-full p-3 mb-3 shadow-lg">
             <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
               <path fill="#fff" d="M12 2C7.03 2 3 6.03 3 11c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9Zm0 16c-3.87 0-7-3.13-7-7 0-3.87 3.13-7 7-7 3.87 0 7 3.13 7 7 0 3.87-3.13 7-7 7Zm0-12a5 5 0 0 0-5 5c0 2.76 2.24 5 5 5s5-2.24 5-5a5 5 0 0 0-5-5Z"/>
             </svg>
           </div>
-          <h1 className="text-3xl font-extrabold text-gray-800 mb-1 tracking-tight">
-            {mode === "login" ? "Hug Home" : "Create Account"}
+          <h1 className="text-3xl font-extrabold text-red-700 mb-1 tracking-tight">
+            {mode === "login" ? "Hug Home" : "สร้างบัญชี"}
           </h1>
           <p className="text-gray-500 text-sm">
             {mode === "login"
-              ? "Login to your Hug Home account"
-              : "Register to get started with Hug Home"}
+              ? "เข้าสู่ระบบ Hug Home"
+              : "สมัครสมาชิกเพื่อเริ่มใช้งาน Hug Home"}
           </p>
         </div>
         <form className="space-y-5" onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ export default function Home() {
                 name="fullname"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-50"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 bg-gray-50"
                 placeholder="Enter your full name"
                 required
               />
@@ -66,8 +66,7 @@ export default function Home() {
               id="phone"
               name="phone"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-50"
+              onChange={(e) => setPhone(e.target.value)}                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 bg-gray-50"
               placeholder="Enter your phone number"
               disabled={showOtp}
               required
@@ -84,7 +83,7 @@ export default function Home() {
                 name="otp"
                 value={otp}
                 onChange={(e) => setOtp(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-50 tracking-widest text-lg text-center"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 bg-gray-50 tracking-widest text-lg text-center"
                 placeholder="Enter OTP"
                 required
               />
@@ -92,7 +91,7 @@ export default function Home() {
           )}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2.5 rounded-lg font-semibold shadow-md hover:from-blue-600 hover:to-purple-600 transition-all duration-200"
+            className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-2.5 rounded-lg font-semibold shadow-md hover:from-red-600 hover:to-red-700 transition-all duration-200"
           >
             {showOtp ? (mode === "login" ? "Login" : "Register") : "Send OTP"}
           </button>
@@ -100,7 +99,7 @@ export default function Home() {
         <div className="mt-6 text-center">
           {mode === "login" ? (
             <button
-              className="text-blue-600 hover:underline font-medium"
+              className="text-red-600 hover:underline font-medium"
               onClick={() => {
                 setMode("register");
                 setShowOtp(false);
@@ -109,11 +108,11 @@ export default function Home() {
                 setOtp("");
               }}
             >
-              Don't have an account? <span className="font-semibold">Register</span>
+              ยังไม่มีบัญชี? <span className="font-semibold">สมัครสมาชิก</span>
             </button>
           ) : (
             <button
-              className="text-blue-600 hover:underline font-medium"
+              className="text-red-600 hover:underline font-medium"
               onClick={() => {
                 setMode("login");
                 setShowOtp(false);
@@ -122,7 +121,7 @@ export default function Home() {
                 setOtp("");
               }}
             >
-              Already have an account? <span className="font-semibold">Login</span>
+              มีบัญชีอยู่แล้ว? <span className="font-semibold">เข้าสู่ระบบ</span>
             </button>
           )}
         </div>

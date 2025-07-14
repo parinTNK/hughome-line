@@ -67,25 +67,25 @@ function page() {
   };
 
 return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-4">
-        <div className="bg-white/90 p-8 rounded-2xl shadow-2xl w-full max-w-md border border-gray-200">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-red-100 to-pink-100 p-4">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md border border-red-100">
             <div className="flex flex-col items-center mb-6">
                 <img
                     src={user.avatar}
                     alt="User Avatar"
-                    className="w-28 h-28 rounded-full border-4 border-blue-500 shadow-lg mb-4"
+                    className="w-28 h-28 rounded-full border-4 border-red-500 shadow-lg mb-4"
                 />
-                <h1 className="text-3xl font-extrabold text-gray-800 mb-1 tracking-tight">{user.name}</h1>
+                <h1 className="text-3xl font-extrabold text-red-700 mb-1 tracking-tight">{user.name}</h1>
                 <p className="text-gray-500 text-sm">{user.Phone}</p>
             </div>
             
             <div className="grid grid-cols-2 gap-4 mb-6">
                 <a
                     href="/reward"
-                    className="bg-gradient-to-br from-blue-100 to-blue-200 text-blue-700 rounded-xl p-4 flex flex-col items-center shadow-md border border-blue-200 hover:shadow-lg transition"
+                    className="bg-gradient-to-br from-red-100 to-red-200 text-red-700 rounded-xl p-4 flex flex-col items-center shadow-md border border-red-200 hover:shadow-lg transition"
                 >
                     <FaGift className="text-3xl mb-2" />
-                    <span className="font-bold text-lg">Reward</span>
+                    <span className="font-bold text-lg">รางวัล</span>
                 </a>
                 <div className="bg-gradient-to-br from-yellow-100 to-yellow-200 text-yellow-700 rounded-xl p-4 flex flex-col items-center shadow-md border border-yellow-200">
                     <span className="font-bold text-lg">คะแนนสะสม</span>
@@ -94,7 +94,7 @@ return (
             </div>
             
             <div 
-                className="bg-gradient-to-r from-green-400 to-green-500 text-white rounded-xl p-4 flex flex-col items-center shadow-lg cursor-pointer hover:from-green-500 hover:to-green-600 transition-all duration-200 transform hover:scale-105"
+                className="bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl p-4 flex flex-col items-center shadow-lg cursor-pointer hover:from-red-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105"
                 onClick={handleGetPointClick}
             >
                 <FaPlusCircle className="text-3xl mb-2" />
@@ -114,7 +114,7 @@ return (
                     <div className="flex gap-3">
                         <button
                             onClick={handleSubmitVideo}
-                            className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2.5 px-4 rounded-lg font-semibold shadow-md hover:from-blue-600 hover:to-purple-600 transition-all duration-200"
+                            className="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-2.5 px-4 rounded-lg font-semibold shadow-md hover:from-red-600 hover:to-red-700 transition-all duration-200"
                         >
                             สะสมคะแนน
                         </button>

@@ -93,28 +93,28 @@ function page() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-red-100 to-pink-100 p-4">
       <div className="max-w-md mx-auto">
         {/* Header */}
-        <div className="bg-white/90 p-6 rounded-2xl shadow-2xl border border-gray-200 mb-4">
+        <div className="bg-white p-6 rounded-2xl shadow-2xl border border-red-100 mb-4">
           <div className="flex items-center justify-between mb-4">
             <button
               onClick={() => router.back()}
-              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-lg bg-red-50 hover:bg-red-100 transition-colors border border-red-200"
             >
-              <FaArrowLeft className="text-gray-600" />
+              <FaArrowLeft className="text-red-600" />
             </button>
-            <h1 className="text-2xl font-extrabold text-gray-800 tracking-tight">Rewards</h1>
+            <h1 className="text-2xl font-extrabold text-red-700 tracking-tight">รางวัล</h1>
             <div className="w-8"></div>
           </div>
           
-          <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 p-4 rounded-xl border border-yellow-200">
+          <div className="bg-gradient-to-r from-red-500 to-red-600 p-4 rounded-xl text-white shadow-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-yellow-700 font-medium">คะแนนของคุณ</p>
-                <p className="text-2xl font-extrabold text-yellow-800">{user.points.toLocaleString()}</p>
+                <p className="text-sm text-red-100 font-medium">คะแนนของคุณ</p>
+                <p className="text-2xl font-extrabold text-white">{user.points.toLocaleString()}</p>
               </div>
-              <FaStar className="text-3xl text-yellow-500" />
+              <FaStar className="text-3xl text-yellow-300" />
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ function page() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
-                      ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md"
+                      ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-md"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
@@ -171,7 +171,7 @@ function page() {
                         !reward.available
                           ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                           : user.points >= reward.points
-                          ? "bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600 shadow-md"
+                          ? "bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 shadow-md"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       }`}
                     >
